@@ -11,10 +11,9 @@ export default function Home() {
   const [keyword, setKeyword] = useState("")
   // using react-query to cache stuff
   const query = useQuery({
-    queryKey: ["search-github", keyword, page],
+    queryKey: [keyword, page, "search-github"],
     queryFn: () => searchRepo(keyword, page),
     enabled: !!keyword,
-    keepPreviousData : true,
     retry: false
   })
 
