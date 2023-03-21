@@ -68,7 +68,10 @@ export default function Home() {
     </>
   )
 
+  // react query error type is unkown because you can throw anything
+  // but we know we are throwing error type so typecasting here
   const error = query.error as Error
+
   const resultsSection = query.isError ? (
     <div>
       {error.message}
