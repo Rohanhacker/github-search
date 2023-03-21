@@ -3,7 +3,7 @@ import React from "react"
 export interface PaginationProps {
   noOfPages: number
   currentPage: number
-  onPageChange?: (pageNumber: number) => void
+  onPageChange: (pageNumber: number) => void
 }
 
 function Pagination({
@@ -32,4 +32,4 @@ function Pagination({
   )
 }
 
-export default Pagination
+export default React.memo(Pagination)

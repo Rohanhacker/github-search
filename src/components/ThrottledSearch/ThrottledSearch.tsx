@@ -19,7 +19,7 @@ function ThrottledSearch({ onSearch, throttle = 250 }: Props) {
   }, [throttledValue, onSearch])
 
   return (
-    <div className="m-10">
+    <div>
       <input
         type="text"
         value={value}
