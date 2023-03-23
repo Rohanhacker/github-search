@@ -4,9 +4,10 @@ import { AppProps } from "next/app"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ErrorBoundary } from "react-error-boundary"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function App({ Component, pageProps }: AppProps) {
-  const queryClient = new QueryClient()
+  const [queryClient] = useState(() => new QueryClient())
   return (
     <ErrorBoundary
       FallbackComponent={() => (
